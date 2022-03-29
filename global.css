@@ -1,0 +1,15 @@
+:root {
+  --body-bg-color: #000000;
+  --menu-bg-color: #0a0a0a;
+  --main-text-color: #ffffff;
+  --secondary-text-color: #33ff00;
+  --bg-cards: #000000;
+  --border-cards-icons-green: #33ff00;
+  --border-cards-icons-white: #FFFFFF.;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}

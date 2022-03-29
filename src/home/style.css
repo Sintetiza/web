@@ -1,0 +1,61 @@
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--menu-bg-color);
+  min-height: 50px;
+  padding: 20px 40px;
+}
+
+body {
+  background-color: var(--body-bg-color);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+}
+
+.links a {
+  color: var(--main-text-color);
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.links a:active,
+.links a:focus,
+.links a:hover {
+  color: var(--secondary-text-color);
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login button {
+  background-color: transparent;
+  color: var(--main-text-color);
+  border: none;
+  padding: 10px 20px;
+  min-width: 160px;
+  border-radius: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid var(--secondary-text-color);
+  transition: all 0.3s ease;
+
+  font-size: 17px;
+}
+
+.login button:active,
+.login button:focus,
+.login button:hover {
+  background-color: var(--secondary-text-color);
+}
