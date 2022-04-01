@@ -1,0 +1,6 @@
+@media (max-width: 1000px) {
+  .mainContent {
+    flex-direction: column;
+    display: flex;
+  }
+}

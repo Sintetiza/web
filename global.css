@@ -1,16 +1,38 @@
 :root {
-  --body-bg-color: #000000;
-  --menu-bg-color: #0a0a0a;
-  --main-text-color: #ffffff;
-  --secondary-text-color: #33ff00;
-  --bg-cards: #000000;
-  --border-cards-icons-green: #33ff00;
-  --border-cards-icons-white: #FFFFFF.;
+	--body-black-bg-color: #000000;
+	--menu-bg-color: #0A0A0A;
+	--title-text-color: #FFFFFF;
+	--body-text-color: #33FF00;
+	--bg-cards: #000000;
+	--green-border-cards-icons: #33FF00;
+	--white-border-cards-icons: #FFFFFF.
 }
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: var(--main-text-color);
+  color: var(--title-text-color);
+}
+
+.btn {
+  background-color: transparent;
+  color: var(--title-text-color);
+  border: none;
+  padding: 10px 20px;
+  min-width: 160px;
+  border-radius: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid var(--body-text-color);
+  transition: all 0.3s ease;
+
+  font-size: 17px;
+}
+
+.btnOutline:active,
+.btnOutline:focus,
+.btnOutline:hover {
+  background-color: var(--body-text-color);
 }

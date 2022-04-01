@@ -1,37 +1,24 @@
 .mainContent {
   display: flex;
   align-items: center;
+}
+
+.imageContainer {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-family: "Poppins", sans-serif;
-  font-size: 15;
+  width: 100%;
 }
 
-.a {
-  font-weight: 700;
+.imageContainer img {
+  width: 100%;
 }
 
-.a1 {
+.title {
+  font-weight: bold;
+  color: var(--title-text-color);
 }
 
-.mainContent button {
-  background-color: transparent;
-  color: var(--main-text-color);
-  border: none;
-  padding: 10px 20px;
-  min-width: 160px;
-  border-radius: 2rem;
-  font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  cursor: pointer;
-  border: 2px solid var(--secondary-text-color);
-  transition: all 0.3s ease;
-
-  font-size: 17px;
-}
-
-.mainContent button:active,
-.mainContent button:focus,
-.mainContent button:hover {
-  background-color: var(--secondary-text-color);
+.title .highlight {
+  color: var(--body-black-bg-color);
 }
