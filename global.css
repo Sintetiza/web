@@ -25,6 +25,10 @@ html::-webkit-scrollbar-thumb {
   background-color: #302f2f;
 }
 
+body {
+  background-color: var(--body-black-bg-color);
+}
+
 .btn {
   background-color: transparent;
   color: var(--title-text-color);

@@ -7,111 +7,75 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./src/home/header.css" />
-    <link rel="stylesheet" href="./src/home/style.css" />
-    <link rel="stylesheet" href="./src/home/responsive.css" />
+    <link rel="stylesheet" href="./src/styles/header.css" />
+    <link rel="stylesheet" href="./src/styles/home.css" />
+    <script
+      src="https://kit.fontawesome.com/f18aeaea05.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="./src/scripts/home/index.js" defer></script>
     <title>Sintetiza</title>
   </head>
   <body>
-    <header class="Header">
-      <div class="logo">
-        <img src="./src/assets/Logo.svg" alt="Sintetiza" />
-      </div>
-      <div class="links">
-        <a href="#">Home</a>
-        <a href="#">Resumos</a>
-        <a href="#">Contato</a>
-      </div>
-      <div class="login">
-        <button class="btn btnOutline">Entrar</button>
-        <button class="btn btnOutline">Cadastrar</button>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="./src/assets/Logo.svg" alt="Logo" />
+        </div>
+        <div class="bars">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <nav class="links">
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li class="dropDown">
+              <a href="#">Resumos</a>
+              <i class="fa-solid fa-angle-down"></i>
+              <div class="dropdownItem">
+                <a href="#">Matemática</a>
+                <a href="#">Português</a>
+                <a href="#">Ciência</a>
+              </div>
+            </li>
+            <li>
+              <a href="#">Quem somos</a>
+            </li>
+            <li>
+              <a href="#">Contato</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="buttons">
+          <button class="login">
+            <i class="fa-regular fa-user"></i> ENTRAR
+          </button>
+          <button class="register">ESTUDAR AGORA</button>
+        </div>
       </div>
     </header>
     <main>
-      <section class="mainContent">
-        <div>
-          <h1 class="title">
-            Nós facilitamos a vida de estudantes com
-            <span class="highlight">resumos</span> 100%
-            <span class="highlight">gratuitos</span>.
+      <section>
+        <div class="ilustration">
+          <img src="./src/assets/ilustration1.svg" alt="Ilustration" />
+        </div>
+        <div class="text">
+          <h1>
+            <span class="highlight">Sintetiza:</span> o resumo da matéria na sua
+            mão.
           </h1>
           <p class="description">
-            Sintetiza é uma plataforma com resumos de olimpíadas e ensino médio,
-            superior e técnico. Venha estudar conosco!
+            Aqui tem resumo de matéria escolar de graça, pra todo mundo. :)
           </p>
-          <button class="btn btnOutline">Vem Estudar!</button>
         </div>
-        <div class="imageContainer">
-          <img src="./src/assets/Ilustration.svg" alt="" />
-        </div>
+        <button>Vem estudar</button>
       </section>
-      <section class="aboutSite">
-        <div>
-          <h1 class="title">
-            Quais <span class="highlight">resumos</span> oferecemos
-            <span class="highlight">?</span>
-          </h1>
-        </div>
-        <div class="cardAboutSiteContainer">
-          <div class="card card-outline">
-            <h2>Olimpíadas científicas</h2>
-            <img src="./src/assets/arrowGreen.svg" alt="Seta Verde" />
-          </div>
-          <div class="card card-outline outlineWhite">
-            <h2 class="highlight">Ensino médio</h2>
-            <img src="./src/assets/arrowWhite.svg" alt="Seta branca" />
-          </div>
-          <div class="card card-outline">
-            <h2>Ensino técnico</h2>
-            <img src="./src/assets/arrowGreen.svg" alt="Seta Verde" />
-          </div>
-        </div>
-      </section>
-      <section class="aboutTeam">
-        <div class="card">
-          <img src="https://github.com/lumanoela123.png" alt="image" />
-          <h2>Luisa</h2>
-        </div>
-        <div class="card">
-          <img src="https://github.com/caiotomazz.png" alt="image" />
-          <h2>Caio</h2>
-        </div>
-        <div class="card">
-          <img src="https://github.com/EmiLopes.png" alt="image" />
-          <h2>Emilly</h2>
-        </div>
-        <div class="card">
-          <img src="https://github.com/BhryanS2.png" alt="image" />
-          <h2>Bhryan</h2>
-        </div>
-      </section>
-      <section class="informations">
-        <div class="line"></div>
-        <img src="./src/assets/Logo.svg" alt="" />
-        <div class="socialMedia">
-          <a href="#">
-            <img src="./src/assets/instagram.svg" alt="Instagram" />
-          </a>
-          <a href="#">
-            <img src="./src/assets/facebook.svg" alt="Facebook" />
-          </a>
-          <a href="#">
-            <img src="./src/assets/twitter.svg" alt="Twitter" />
-          </a>
-          <a href="#">
-            <img src="./src/assets/G-mail.svg" alt="Youtube" />
-          </a>
-        </div>
-      </section>
-      <div class="goTopContainer">
-        <a href="#">
-          <img src="./src/assets/goTop.svg" alt="" class="goTop" />
-        </a>
-      </div>
     </main>
   </body>
 </html>

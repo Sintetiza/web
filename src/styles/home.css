@@ -1,0 +1,41 @@
+:root {
+  --body-black-bg-color: #000000;
+  --menu-bg-color: #0a0a0a;
+  --title-text-color: #ffffff;
+  --body-text-color: #33ff00;
+  --bg-cards: #000000;
+  --green-border-cards-icons: #33ff00;
+  --white-border-cards-icons: #FFFFFF.;
+}
+
+.ilustration {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text {
+  width: 100%;
+}
+
+.text h1 {
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 55px;
+  line-height: 85px;
+  text-align: center;
+}
+
+.text .highlight {
+  color: var(--body-text-color);
+}
+
+.text p {
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 45px;
+  text-align: center;
+}
