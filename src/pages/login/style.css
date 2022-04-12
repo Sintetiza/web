@@ -1,0 +1,98 @@
+:root {
+    --body-black-bg-color: #000000;
+    --menu-bg-color: #0a0a0a;
+    --title-text-color: #ffffff;
+    --body-text-color: #33ff00;
+    --bg-cards: #000000;
+    --green-border-cards-icons: #33ff00;
+    --white-border-cards-icons: #FFFFFF.;
+  }
+
+  .content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 16px;
+  }
+
+.box-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--green-border-cards-icons);
+    margin: 20px;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+
+    
+    
+
+}
+
+.email input{
+    border: 2px solid  ;
+    background: black;
+    border-radius: 18.03px;
+    
+    padding: 5px;
+
+   
+}
+
+.password input{
+    border: 2px solid  ;
+    background: black;
+    border-radius: 18.03px;
+    
+    padding: 5px;
+
+}
+
+.button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.button button {
+    border-radius: 14px;
+    border: 2px solid  ;
+    background: black;
+    font-family: 'Source Code Pro', monospace;
+    padding: 5px;
+    width: 100%;
+    
+
+
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+h1, p, a{
+    font-family: 'Source Code Pro', monospace;
+}
+
+.remember{
+    margin-bottom: 50px;
+}
+
+.hightlight{
+    color: var(--body-text-color);
+}
