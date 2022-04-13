@@ -6,6 +6,26 @@ header {
     var(--green-border-cards-icons),
     #fbfbfb59
   );
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9;
+}
+
+header.headerScroll,
+header.headerScroll .container {
+  background: transparent;
+  padding: 0;
+}
+
+header.headerScroll {
+  backdrop-filter: blur(10px);
+  background-color: #000;
+  opacity: 0.8;
+}
+
+header.headerScroll .container {
+  padding: 20px;
 }
 
 .container {
