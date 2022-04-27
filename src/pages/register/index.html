@@ -1,39 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/styles/global.css">
-</head>
-<body>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="../../styles/form.css" />
+    <link rel="stylesheet" href="../../../global.css" />
+    <script
+      src="https://kit.fontawesome.com/f18aeaea05.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="../../scripts/form/index.js" defer></script>
+  </head>
+  <body>
     <div class="seta">
-        <a href="">Voltar</a>
+      <i class="fa-solid fa-arrow-left-long"></i>
+      <p>Voltar</p>
+    </div>
+    <div class="box-login">
+      <div class="logo">
+        <img src="../../assets/Logo.svg" alt="" />
       </div>
-      <div class="box-login">
-        <div class="logo">
-          <img src="/assets/Logo.svg" alt="" />
+      <div class="content">
+        <h1>E ai, <span class="hightlight">estudante?!</span></h1>
+        <p>Preencha abaixo para se cadastrar</p>
+      </div>
+      <form class="form">
+        <div class="email inputContainer">
+          <i class="fa-regular fa-envelope"></i>
+          <input type="email" name="email" placeholder="Qual é seu e-mail?" />
         </div>
-        <div class="content">
-          <h1>E ai, <span  class="hightlight">estudante?!</span></h1>
-          <p>Preencha abaixo para se cadastrar</p>
+
+        <div class="password inputContainer">
+          <i class="fa-regular fa-lock"></i>
+          <input type="password" name="password" placeholder="Crie uma senha" />
         </div>
-        <form class="input">
-            <div class="email">
-              <input type="email" name="e-mail" id="" placeholder="Qual é seu e-mail?" />
-            </div>
-          
-          <div class="password">
-              <input type="password" name="" id="" placeholder="Crie uma senha"/>
-          </div>
-  
-          <div class="button">
-              <button>Criar conta</button>
-            </div>
-            <a href="" class="remember">Já tenho conta :P</a>
-          </form>
-          </div>
-</body>
+
+        <div class="button">
+          <button>Criar conta</button>
+        </div>
+        <a href="" class="remember">Já tenho conta :P</a>
+      </form>
+    </div>
+  </body>
 </html>
