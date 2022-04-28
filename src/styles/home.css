@@ -104,7 +104,7 @@ main section {
 }
 
 main {
-  padding: 0 121px;
+  padding: 0 5%;
 }
 
 .about .textItem h1 {
@@ -127,6 +127,8 @@ main {
 .about .content {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
 .about .text {
@@ -142,7 +144,7 @@ main {
   border: 2px solid #ffffff;
   position: absolute;
   z-index: 0;
-  transform: translate(114px, -35px);
+  transform: translate(5%, -10%);
 }
 
 .lineBG,
@@ -171,7 +173,8 @@ main {
     rgba(0, 0, 0, 0.72) 81.51%
   );
   opacity: 0.7;
-  height: 927px;
+  min-height: 927px;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;

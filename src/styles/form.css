@@ -82,6 +82,7 @@ input {
   width: 100%;
   color: var(--title-text-color);
   width: 300px;
+  cursor: pointer;
   height: 40px;
 }
 
@@ -92,6 +93,7 @@ form {
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  padding-bottom: 100px;
 }
 
 h1,
@@ -101,9 +103,9 @@ a {
   color: var(--title-text-color);
 }
 
-.remember {
+/* .remember {
   margin-bottom: 100px;
-}
+} */
 
 .hightlight {
   color: var(--body-text-color);
