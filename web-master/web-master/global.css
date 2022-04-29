@@ -1,0 +1,57 @@
+:root {
+  --body-black-bg-color: #000000;
+  --menu-bg-color: #0a0a0a;
+  --title-text-color: #ffffff;
+  --body-text-color: #33ff00;
+  --bg-cards: #000000;
+  --green-border-cards-icons: #33ff00;
+  --white-border-cards-icons: #FFFFFF.;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--title-text-color);
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+  background-color: #0a0a0a;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 2rem;
+  background-color: #302f2f;
+}
+
+body {
+  background-color: var(--body-black-bg-color);
+}
+
+.btn {
+  background-color: transparent;
+  color: var(--title-text-color);
+  border: none;
+  padding: 10px 20px;
+  min-width: 160px;
+  border-radius: 2rem;
+  font-family: "Source Code Pro", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid var(--body-text-color);
+  transition: all 0.3s ease;
+
+  font-size: 17px;
+}
+
+.btnOutline {
+  border: 2px solid var(--green-border-cards-icons);
+}
+
+.btnOutline:active,
+.btnOutline:focus,
+.btnOutline:hover {
+  background-color: var(--body-text-color);
+}
