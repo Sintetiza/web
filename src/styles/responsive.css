@@ -1,4 +1,4 @@
-@media (max-width: 920px) {
+@media (max-width: 980px) {
   .text h1 {
     font-weight: 900;
     font-size: 2rem;
@@ -27,9 +27,10 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .about .content {
+  #About .content {
     display: block;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   .lineBG {
@@ -38,7 +39,7 @@
 
   .lineBG,
   .textItem,
-  .about .text {
+  #About .text {
     width: 100%;
     height: 170px;
   }
