@@ -55,3 +55,7 @@ body {
 .btnOutline:hover {
   background-color: var(--body-text-color);
 }
+
+.text-center {
+  text-align: center;
+}
