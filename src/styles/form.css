@@ -115,22 +115,3 @@ a {
   text-decoration: none;
   color: var(--title-text-color);
 }
-
-.seta {
-  position: fixed;
-  top: 25px;
-  left: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.seta p {
-  pointer-events: none;
-}
-
-.seta i {
-  color: var(--body-text-color);
-}

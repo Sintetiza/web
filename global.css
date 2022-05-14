@@ -29,6 +29,11 @@ body {
   background-color: var(--body-black-bg-color);
 }
 
+a {
+  text-decoration: none;
+  color: var(--title-text-color);
+}
+
 .btn {
   background-color: transparent;
   color: var(--title-text-color);
@@ -58,4 +63,28 @@ body {
 
 .text-center {
   text-align: center;
+}
+
+.seta {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.seta p,
+.seta a {
+  pointer-events: none;
+}
+
+.seta i {
+  color: var(--body-text-color);
+}
+
+.highlight {
+  color: var(--body-text-color);
 }
