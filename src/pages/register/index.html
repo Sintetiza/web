@@ -33,7 +33,11 @@
         <h1>E ai, <span class="hightlight">estudante</span>?!👋</h1>
         <p>Preencha abaixo para se cadastrar</p>
       </div>
-      <form class="form">
+      <form
+        class="form"
+        action="../../../controller/sendRegister.php"
+        method="post"
+      >
         <div class="email inputContainer">
           <i class="fa-regular fa-envelope"></i>
           <input type="email" name="email" placeholder="Qual é seu e-mail?" />
@@ -45,7 +49,7 @@
         </div>
 
         <div class="button">
-          <button>Criar conta👉</button>
+          <button type="submit">Criar conta👉</button>
         </div>
         <a href="../login/index.html" class="remember">Já tenho conta :P</a>
       </form>
