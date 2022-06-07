@@ -117,3 +117,18 @@ a {
   text-decoration: none;
   color: var(--title-text-color);
 }
+
+.success,
+.error {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.success {
+  color: var(--body-text-color);
+}
+
+.error {
+  color: rgb(255, 0, 0);
+}

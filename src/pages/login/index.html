@@ -40,7 +40,13 @@
         <h1>E ai, <span class="hightlight">estudante</span>?!👋</h1>
         <p>Identifique-se para prosseguir:</p>
       </div>
-      <form class="form">
+      <div class="message"></div>
+      <form
+        class="form"
+        action="../../../controller/pages/login.php"
+        method="post"
+        onsubmit="submit()"
+      >
         <div class="email inputContainer">
           <i class="fa-solid fa-lock"></i>
           <input type="email" name="email" placeholder="E-mail" />
@@ -52,7 +58,7 @@
         </div>
 
         <div class="button">
-          <button>Entrar👉</button>
+          <button type="submit">Entrar👉</button>
           <a href="../register/index.html"> Cadastrar-me :) </a>
         </div>
         <a href="../forgetPassword/index.html" class="remember"
@@ -60,5 +66,27 @@
         >
       </form>
     </div>
+
+    <script>
+      function submit(event) {
+        event.preventDefault();
+        const form = event.target;
+        const data = form.elements;
+        const objData = {};
+        data.reduce((acc, curr) => {
+          acc[curr.name] = curr.value;
+          return acc;
+        }, objData);
+        const url = form.action;
+        const method = form.method;
+        const response = fetch(url, {
+          method: "POST",
+          body: JSON.stringify(objData),
+        });
+      }
+    </script>
+    <script type="module">
+      import { formUrl } from "../../utils/formURL.js";
+    </script>
   </body>
 </html>

@@ -25,8 +25,9 @@ create table if not exists `role` (
 CREATE TABLE if not exists `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `roleId` INTEGER NOT NULL,
-  `email` TEXT NOT NULL,
-  `name` TEXT NOT NULL,
+  `email` varchar(300) NOT NULL,
+  `password` LONGTEXT NOT NULL,
+  `name` varchar(5000) NOT NULL,
   `createdAt` TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updatedAt` TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
@@ -45,8 +46,8 @@ CREATE TABLE if not exists `userLog` (
 
 CREATE TABLE if not exists `post` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` TEXT NOT NULL,
-  `content` TEXT,
+  `title` LONGTEXT NOT NULL,
+  `content` LONGTEXT,
   `published` BOOLEAN NOT NULL DEFAULT false,
   `authorId` INTEGER,
   `createdAt` TIMESTAMP NOT NULL DEFAULT now(),
@@ -97,6 +98,7 @@ insert into
     `id`,
     `roleId`,
     `email`,
+    `password`,
     `name`,
     `createdAt`,
     `updatedAt`
@@ -106,6 +108,7 @@ values
     1,
     1,
     'teste@gmail.com',
+    '123',
     'Teste',
     now(),
     now()
@@ -114,6 +117,7 @@ values
     2,
     2,
     'teste2@gmail.com',
+    '123',
     'Teste2',
     now(),
     now()

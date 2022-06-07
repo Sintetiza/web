@@ -20,6 +20,7 @@
     ></script>
     <script src="../../scripts/form/index.js" defer></script>
   </head>
+
   <body>
     <div class="seta">
       <i class="fa-solid fa-arrow-left-long"></i>
@@ -33,19 +34,40 @@
         <h1>E ai, <span class="hightlight">estudante</span>?!👋</h1>
         <p>Preencha abaixo para se cadastrar</p>
       </div>
+      <div class="message"></div>
       <form
         class="form"
-        action="../../../controller/sendRegister.php"
+        action="../../../controller/pages/sendRegister.php"
         method="post"
+        onsubmit="submit()"
       >
+        <div class="name inputContainer">
+          <i class="fa-solid fa-user"></i>
+          <input
+            type="text"
+            name="name"
+            placeholder="Qual é seu nome?"
+            required
+          />
+        </div>
         <div class="email inputContainer">
           <i class="fa-regular fa-envelope"></i>
-          <input type="email" name="email" placeholder="Qual é seu e-mail?" />
+          <input
+            type="email"
+            name="email"
+            placeholder="Qual é seu e-mail?"
+            required
+          />
         </div>
 
         <div class="password inputContainer">
           <i class="fa-regular fa-lock"></i>
-          <input type="password" name="password" placeholder="Crie uma senha" />
+          <input
+            type="password"
+            name="password"
+            placeholder="Crie uma senha"
+            required
+          />
         </div>
 
         <div class="button">
@@ -54,5 +76,27 @@
         <a href="../login/index.html" class="remember">Já tenho conta :P</a>
       </form>
     </div>
+    <script>
+      function submit(event) {
+        event.preventDefault();
+        const form = event.target;
+        const data = form.elements;
+        const objData = {};
+        data.reduce((acc, curr) => {
+          acc[curr.name] = curr.value;
+          return acc;
+        }, objData);
+        const url = form.action;
+        const method = form.method;
+        const response = fetch(url, {
+          method: "POST",
+          body: JSON.stringify(objData),
+        });
+      }
+    </script>
+
+    <script type="module">
+      import { formUrl } from "../../utils/formURL.js";
+    </script>
   </body>
 </html>
