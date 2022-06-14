@@ -55,6 +55,7 @@
       <div class="button">
         <button type="submit">Confirmar alteração de dados</button>
       </div>
+      <a href="../../../controller/deleteuser.php">DELETAR CONTA</a>
     </form>
   </main>
 </body>
