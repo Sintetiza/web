@@ -45,6 +45,7 @@ $arrayForSave = [
   'name' => $resultArray['name'],
   'email' => $resultArray['email'],
   'roleId' => $resultArray['roleId'],
+  'avatar' => $resultArray['avatar'],
 ];
 $_SESSION['user'] = $arrayForSave;
 

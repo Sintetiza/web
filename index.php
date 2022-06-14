@@ -50,41 +50,42 @@
         </ul>
       </nav>
       <?php
+      session_start();
       $isUser = isset($_SESSION['user']);
-      if ($isUser) {
-        echo '<div class="user">
-              <div class="userName">
-                <p>' . $_SESSION['user']['name'] . '</p>
-              </div>
-              <div class="userIcon">
-                <i class="fa-solid fa-user"></i>
-              </div>
-              <div class="userDropdown">
-                <ul>
-                  <li>
-                    <a href="#">Perfil</a>
-                  </li>
-                  <li>
-                    <a href="#">Sair</a>
-                  </li>
-                </ul>
-              </div>
-            </div>';
-      } else {
-        echo '
-            <div class="buttons">
-              <a href="./src/pages/login/index.html">
-                <button class="login">
-                  <i class="fa-regular fa-user"></i> ENTRAR
-                </button>
-              </a>
-              <a href="./src/pages/register/index.html">
-                <button class="register">ESTUDAR AGORA👉</button>
-              </a>
-            </div>
-          </div>';
-      }
       ?>
+      <?php if ($isUser) : ?>
+        <div class="user">
+          <div class="userName">
+            <p><?php echo $_SESSION['user']['name'] ?></p>
+          </div>
+          <div class="userIcon">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="userDropdown">
+            <ul>
+              <li>
+                <a href="./src/pages/profile/index.php">Perfil</a>
+              </li>
+              <li>
+                <a href="./controller/signout.php">Sair</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      <?php else : ?>
+
+        <div class="buttons">
+          <a href="./src/pages/login/index.html">
+            <button class="login">
+              <i class="fa-regular fa-user"></i> ENTRAR
+            </button>
+          </a>
+          <a href="./src/pages/register/index.html">
+            <button class="register">ESTUDAR AGORA👉</button>
+          </a>
+        </div>
+    </div>
+  <?php endif; ?>
   </header>
   <main>
     <section class="mainContent" id="Home">

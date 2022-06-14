@@ -28,6 +28,8 @@ CREATE TABLE if not exists `user` (
   `email` varchar(300) NOT NULL,
   `password` LONGTEXT NOT NULL,
   `name` varchar(5000) NOT NULL,
+  `avatar` LONGTEXT,
+  `CPF` varchar(11),
   `createdAt` TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updatedAt` TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
@@ -100,6 +102,8 @@ insert into
     `email`,
     `password`,
     `name`,
+    `avatar`,
+    `CPF`,
     `createdAt`,
     `updatedAt`
   )
@@ -109,6 +113,8 @@ values
     1,
     'teste@gmail.com',
     '123',
+    'https://github.com/diego3g.png',
+    '11111111111',
     'Teste',
     now(),
     now()
@@ -118,6 +124,8 @@ values
     2,
     'teste2@gmail.com',
     '123',
+    'https://github.com/EmiLopes.png',
+    '22222222222',
     'Teste2',
     now(),
     now()
