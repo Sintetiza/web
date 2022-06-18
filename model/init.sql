@@ -60,6 +60,16 @@ CREATE TABLE if not exists `post` (
   CONSTRAINT `fk_subjectId` FOREIGN KEY (`subjectId`) REFERENCES `subject`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+-- create a table for user ask post
+create table if not exists `aksPost` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `userId` INTEGER,
+  `email` varchar(300) NOT NULL,
+  `askPost` LONGTEXT,
+  `createdAt` TIMESTAMP NOT NULL DEFAULT now(),
+  PRIMARY KEY (`id`)
+);
+
 -- CreateIndex
 CREATE UNIQUE INDEX `user_email_key` ON `user`(`email`);
 
@@ -127,6 +137,17 @@ values
     'https://github.com/EmiLopes.png',
     '22222222222',
     'Teste2',
+    now(),
+    now()
+  ),
+  (
+    3,
+    1,
+    '12201000278@muz.ifsuldeminas.edu.br',
+    '$2y$10$IXH9Kjtx4EDTpzXNvwYVleiYbCOW.5fuQRMXTQHpeoJ9qzQh3ORBK',
+    'https://github.com/bhryans2.png',
+    '33333333333',
+    'Bhryans',
     now(),
     now()
   );

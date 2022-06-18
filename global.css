@@ -59,6 +59,7 @@ a {
 .btnOutline:focus,
 .btnOutline:hover {
   background-color: var(--body-text-color);
+  color: var(--body-black-bg-color);
 }
 
 .text-center {
@@ -87,4 +88,8 @@ a {
 
 .highlight {
   color: var(--body-text-color);
+}
+
+.textUpperCase {
+  text-transform: uppercase;
 }

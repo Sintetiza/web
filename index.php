@@ -54,24 +54,35 @@
       $isUser = isset($_SESSION['user']);
       ?>
       <?php if ($isUser) : ?>
-        <div class="user">
-          <div class="userName">
-            <p><?php echo $_SESSION['user']['name'] ?></p>
-          </div>
-          <div class="userIcon">
-            <i class="fa-solid fa-user"></i>
-          </div>
-          <div class="userDropdown">
-            <ul>
-              <li>
-                <a href="./src/pages/profile/index.php">Perfil</a>
-              </li>
-              <li>
-                <a href="./controller/signout.php">Sair</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <?php
+        $user = $_SESSION['user'];
+        ?>
+        <ul class="pedirResumo">
+          <li class="textUpperCase">
+            <a href="./src/pages/resumos/pedir.html" class="btn btnOutline">
+              Pedir Resumo
+            </a>
+          </li>
+
+          <li class="dropDown">
+            <div class="userContainer">
+              <div class="userImage">
+                <?php if (empty($user['avatar'])) : ?>
+                  <i class="fa-regular fa-user"></i>
+                <?php else : ?>
+                  <img src="<?php echo $user['avatar'] ?>" alt="user image">
+                <?php endif; ?>
+              </div>
+              <p>
+                <?php echo explode(' ',  $user['name'])[0]; ?>
+              </p>
+            </div>
+            <div class="dropdownItem">
+              <a href="./src/pages/profile/index.php">Perfil</a>
+              <a href="./controller/signout.php">Sair</a>
+            </div>
+          </li>
+        </ul>
       <?php else : ?>
 
         <div class="buttons">

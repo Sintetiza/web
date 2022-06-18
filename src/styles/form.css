@@ -132,3 +132,21 @@ a {
 .error {
   color: rgb(255, 0, 0);
 }
+
+.textarea {
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  max-height: 200px;
+  color: white;
+}
+
+.textarea textarea {
+  backdrop-filter: blur(10px);
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  outline: none;
+  border: none;
+}

@@ -28,6 +28,9 @@ header.headerScroll .container {
   padding: 20px;
 }
 
+.logo {
+  margin: 0;
+}
 .container {
   background: rgb(99, 99, 99);
   display: flex;
@@ -38,6 +41,7 @@ header.headerScroll .container {
   font-weight: 500;
   font-size: 18px;
   line-height: 39px;
+  max-height: 70px;
 }
 
 .container ul {
@@ -54,6 +58,18 @@ header.headerScroll .container {
 .container a:focus,
 .container a:active {
   color: var(--body-text-color);
+}
+
+.container .btn {
+  border-radius: 12px;
+}
+
+.container .btnOutline {
+  font-size: 16px;
+}
+
+.container .btnOutline:hover {
+  color: var(--body-black-bg-color);
 }
 
 .dropDown {
@@ -118,6 +134,25 @@ header.headerScroll .container {
   color: var(--body-text-color);
 }
 
+.userContainer:hover p,
+.userContainer:hover i {
+  color: var(--body-text-color);
+  transition: all 0.3s ease;
+}
+
+.userContainer,
+.userImage {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.userImage img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
 /* MOBILE */
 @media (max-width: 980px) {
   .container {
@@ -166,5 +201,8 @@ header.headerScroll .container {
     width: 50vw;
     height: 100vw;
     background-color: #0a0a0a;
+  }
+  .container .pedirResumo .textUpperCase {
+    display: none;
   }
 }
