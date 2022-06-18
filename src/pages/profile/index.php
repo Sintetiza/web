@@ -65,10 +65,10 @@
           <li class="dropDown">
             <div class="userContainer">
               <div class="userImage">
-                <?php if (empty($user['avatar'])) : ?>
+                <?php if (empty($avatar)) : ?>
                   <i class="fa-regular fa-user"></i>
                 <?php else : ?>
-                  <img src="<?php echo $user['avatar'] ?>" alt="user image">
+                  <img src="<?php echo $avatar ?>" alt="user image">
                 <?php endif; ?>
               </div>
               <p>
