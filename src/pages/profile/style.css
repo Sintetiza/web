@@ -1,0 +1,34 @@
+#profile {
+  margin-top: 75px;
+}
+
+.containerProfile {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 1px solid red;
+  padding: 30px 20px;
+}
+
+.containerData {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  /* flex-direction: column; */
+}
+
+.imageContainer {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.imageContainer img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+}

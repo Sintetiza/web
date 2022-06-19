@@ -17,7 +17,6 @@
     />
     <title>Login</title>
     <link rel="stylesheet" href="../../../global.css" />
-    <!-- <link rel="stylesheet" href="./style.css" /> -->
     <link rel="stylesheet" href="../../styles/form.css" />
 
     <script
@@ -28,44 +27,46 @@
     <script src="../../scripts/form/index.js" defer></script>
   </head>
   <body>
-    <div class="seta">
-      <i class="fa-solid fa-arrow-left-long"></i>
-      <p>Voltar</p>
-    </div>
-    <div class="box-login">
-      <div class="logo">
-        <img src="../../assets/Logo.svg" alt="" />
+    <main class="pageForm">
+      <div class="seta">
+        <i class="fa-solid fa-arrow-left-long"></i>
+        <p>Voltar</p>
       </div>
-      <div class="content">
-        <h1>E ai, <span class="hightlight">estudante</span>?!👋</h1>
-        <p>Identifique-se para prosseguir:</p>
-      </div>
-      <div class="message"></div>
-      <form
-        class="form"
-        action="../../../controller/pages/login.php"
-        method="post"
-        onsubmit="submit()"
-      >
-        <div class="email inputContainer">
-          <i class="fa-solid fa-lock"></i>
-          <input type="email" name="email" placeholder="E-mail" />
+      <div class="box-login">
+        <div class="logo">
+          <img src="../../assets/Logo.svg" alt="" />
         </div>
-
-        <div class="password inputContainer">
-          <i class="fa-regular fa-lock"></i>
-          <input type="password" name="password" placeholder="Senha" />
+        <div class="content">
+          <h1>E ai, <span class="hightlight">estudante</span>?!👋</h1>
+          <p>Identifique-se para prosseguir:</p>
         </div>
-
-        <div class="button">
-          <button type="submit">Entrar👉</button>
-          <a href="../register/index.html"> Cadastrar-me :) </a>
-        </div>
-        <a href="../forgetPassword/index.html" class="remember"
-          >Esqueci a senha :(</a
+        <div class="message"></div>
+        <form
+          class="form"
+          action="../../../controller/pages/login.php"
+          method="post"
+          onsubmit="submit()"
         >
-      </form>
-    </div>
+          <div class="email inputContainer">
+            <i class="fa-solid fa-lock"></i>
+            <input type="email" name="email" placeholder="E-mail" />
+          </div>
+
+          <div class="password inputContainer">
+            <i class="fa-regular fa-lock"></i>
+            <input type="password" name="password" placeholder="Senha" />
+          </div>
+
+          <div class="button">
+            <button type="submit">Entrar👉</button>
+            <a href="../register/index.html"> Cadastrar-me :) </a>
+          </div>
+          <a href="../forgetPassword/index.html" class="remember"
+            >Esqueci a senha :(</a
+          >
+        </form>
+      </div>
+    </main>
 
     <script>
       function submit(event) {

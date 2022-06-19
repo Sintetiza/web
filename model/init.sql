@@ -145,9 +145,9 @@ values
     1,
     '12201000278@muz.ifsuldeminas.edu.br',
     '$2y$10$IXH9Kjtx4EDTpzXNvwYVleiYbCOW.5fuQRMXTQHpeoJ9qzQh3ORBK',
+    'Bhryan Stepenhen',
     'https://github.com/bhryans2.png',
     '33333333333',
-    'Bhryans',
     now(),
     now()
   );

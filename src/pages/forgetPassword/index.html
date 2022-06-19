@@ -9,7 +9,6 @@
       href="../../assets/icon.png"
       type="image/x-icon"
     />
-    :
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,27 +28,55 @@
     <script src="../../scripts/form/index.js" defer></script>
   </head>
   <body>
-    <div class="seta">
-      <i class="fa-solid fa-arrow-left-long"></i>
-      <p>Voltar</p>
-    </div>
-    <div class="box-login">
-      <div class="logo">
-        <img src="../../assets/Logo.svg" alt="" />
+    <main class="pageForm">
+      <div class="seta">
+        <i class="fa-solid fa-arrow-left-long"></i>
+        <p>Voltar</p>
       </div>
-      <div class="content">
-        <h1><span class="hightlight">Esqueceu</span> a senha? 😥</h1>
-        <p>Relaxa, vamos dar um jeito nisso! ;)</p>
+      <div class="box-login">
+        <div class="logo">
+          <img src="../../assets/Logo.svg" alt="" />
+        </div>
+        <div class="content">
+          <h1><span class="hightlight">Esqueceu</span> a senha? 😥</h1>
+          <p>Relaxa, vamos dar um jeito nisso! ;)</p>
+        </div>
+        <form
+          class="form"
+          action="../../../controller/pages/forgetPassword.php"
+          method="POST"
+        >
+          <div class="email inputContainer">
+            <i class="fa-solid fa-lock"></i>
+            <input type="email" name="email" placeholder="E-mail" />
+          </div>
+          <div class="button">
+            <button>Recuperar senha👉</button>
+          </div>
+        </form>
       </div>
-      <form class="form">
-        <div class="email inputContainer">
-          <i class="fa-solid fa-lock"></i>
-          <input type="email" name="email" placeholder="E-mail" />
-        </div>
-        <div class="button">
-          <button>Recuperar senha👉</button>
-        </div>
-      </form>
-    </div>
+    </main>
+
+    <script>
+      function submit(event) {
+        event.preventDefault();
+        const form = event.target;
+        const data = form.elements;
+        const objData = {};
+        data.reduce((acc, curr) => {
+          acc[curr.name] = curr.value;
+          return acc;
+        }, objData);
+        const url = form.action;
+        const method = form.method;
+        const response = fetch(url, {
+          method: "POST",
+          body: JSON.stringify(objData),
+        });
+      }
+    </script>
+    <script type="module">
+      import { formUrl } from "../../utils/formURL.js";
+    </script>
   </body>
 </html>

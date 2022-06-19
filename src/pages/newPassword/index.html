@@ -28,32 +28,34 @@
     <script src="../../scripts/form/index.js" defer></script>
   </head>
   <body>
-    <div class="seta">
-      <i class="fa-solid fa-arrow-left-long"></i>
-      <p>Voltar</p>
-    </div>
-    <div class="box-login">
-      <div class="logo">
-        <img src="../../assets/Logo.svg" alt="" />
+    <main class="pageForm">
+      <div class="seta">
+        <i class="fa-solid fa-arrow-left-long"></i>
+        <p>Voltar</p>
       </div>
-      <img src="" alt="" />
-      <div class="content">
-        <h1>Digite a senha nova 🙌</h1>
-        <p>E prontinho, pode entrar :)</p>
+      <div class="box-login">
+        <div class="logo">
+          <img src="../../assets/Logo.svg" alt="" />
+        </div>
+        <img src="" alt="" />
+        <div class="content">
+          <h1>Digite a senha nova 🙌</h1>
+          <p>E prontinho, pode entrar :)</p>
+        </div>
+        <form class="form">
+          <div class="password inputContainer">
+            <i class="fa-solid fa-lock"></i>
+            <input
+              type="password"
+              name="password"
+              placeholder="Digite a senha nova"
+            />
+          </div>
+          <div class="button">
+            <button>Entrar👉</button>
+          </div>
+        </form>
       </div>
-      <form class="form">
-        <div class="password inputContainer">
-          <i class="fa-solid fa-lock"></i>
-          <input
-            type="password"
-            name="password"
-            placeholder="Digite a senha nova"
-          />
-        </div>
-        <div class="button">
-          <button>Entrar👉</button>
-        </div>
-      </form>
-    </div>
+    </main>
   </body>
 </html>

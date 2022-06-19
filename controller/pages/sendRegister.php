@@ -49,7 +49,7 @@ $fields = [
   "password" => $passwordSecure,
   "createdAt" => date("Y-m-d H:i:s"),
   "updatedAt" => date("Y-m-d H:i:s"),
-  "roleId" => 1,
+  "roleId" => 2,
 ];
 
 

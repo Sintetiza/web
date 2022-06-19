@@ -29,44 +29,46 @@
   </head>
 
   <body>
-    <div class="seta">
-      <i class="fa-solid fa-arrow-left-long"></i>
-      <p>Voltar</p>
-    </div>
-    <div class="box-login">
-      <div class="logo">
-        <img src="../../assets/Logo.svg" alt="" />
+    <main class="pageForm">
+      <div class="seta">
+        <i class="fa-solid fa-arrow-left-long"></i>
+        <p>Voltar</p>
       </div>
-      <div class="content">
-        <h1>E ai, <span class="hightlight">estudante</span>?!👋</h1>
-        <p>Peça seu resumo aí embaixo:</p>
+      <div class="box-login">
+        <div class="logo">
+          <img src="../../assets/Logo.svg" alt="" />
+        </div>
+        <div class="content">
+          <h1>E ai, <span class="hightlight">estudante</span>?!👋</h1>
+          <p>Peça seu resumo aí embaixo:</p>
+        </div>
+        <div class="message"></div>
+        <form
+          class="form"
+          action="../../../controller/pages/resumo.php"
+          method="post"
+          onsubmit="submit()"
+        >
+          <div class="email inputContainer">
+            <i class="fa-solid fa-lock"></i>
+            <input type="email" name="email" placeholder="E-mail" />
+          </div>
+
+          <div class="textarea inputContainer">
+            <textarea
+              name="pedidoDeResumo"
+              cols="30"
+              rows="10"
+              placeholder="Faça seu pedido aqui..."
+            ></textarea>
+          </div>
+
+          <div class="button">
+            <button type="submit">Pedir 👉</button>
+          </div>
+        </form>
       </div>
-      <div class="message"></div>
-      <form
-        class="form"
-        action="../../../controller/pages/resumo.php"
-        method="post"
-        onsubmit="submit()"
-      >
-        <div class="email inputContainer">
-          <i class="fa-solid fa-lock"></i>
-          <input type="email" name="email" placeholder="E-mail" />
-        </div>
-
-        <div class="textarea inputContainer">
-          <textarea
-            name="pedidoDeResumo"
-            cols="30"
-            rows="10"
-            placeholder="Faça seu pedido aqui..."
-          ></textarea>
-        </div>
-
-        <div class="button">
-          <button type="submit">Pedir 👉</button>
-        </div>
-      </form>
-    </div>
+    </main>
 
     <script>
       function submit(event) {
