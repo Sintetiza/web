@@ -137,6 +137,7 @@
 
 .sectionData {
   margin-top: 50px;
+  position: relative;
 }
 
 .sectionData .inputsContainer {
@@ -187,4 +188,88 @@
   height: 50px;
   margin: 0 auto;
   cursor: pointer;
+}
+
+.cardsContainers {
+  display: flex;
+  justify-content: space-between;
+  /* max-width: 80vw; */
+  overflow: auto;
+  padding: 0 36px;
+  gap: 2rem;
+}
+
+.card {
+  border: 2px solid #33ff00;
+  max-width: 350px;
+  min-width: 200px;
+  border-radius: 12px;
+  padding: 10px;
+  position: relative;
+  font-family: "Source Code Pro", sans-serif;
+}
+
+.card .createDate {
+  font-size: 14px;
+  line-height: normal;
+  margin: 1rem 0;
+}
+
+.card .cardTitle h1 {
+  font-size: 24px;
+  color: #33ff00;
+  text-transform: capitalize;
+}
+
+.card .cardProfile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 50px;
+}
+
+.card .cardProfileImage {
+  width: 53px;
+  height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #33ff00;
+  border-radius: 50%;
+}
+
+.card .cardProfileImage img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.card .delete {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.controllers > div {
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.prev {
+  position: absolute;
+  top: 50%;
+  /* left: 0; */
+}
+
+.next {
+  position: absolute;
+  top: 50%;
+  right: 0;
 }

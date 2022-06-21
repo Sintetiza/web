@@ -35,6 +35,7 @@ CREATE TABLE if not exists `user` (
   `avatar` LONGTEXT,
   `birthDate` DATE,
   `CPF` varchar(11),
+  `postSave` int(11),
   `createdAt` TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updatedAt` TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
@@ -73,6 +74,15 @@ create table if not exists `aksPost` (
   `askPost` LONGTEXT,
   `createdAt` TIMESTAMP NOT NULL DEFAULT now(),
   PRIMARY KEY (`id`)
+);
+
+create table if not exists `savePost` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `userId` INTEGER,
+  `postId` INTEGER,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `fk_userId` FOREIGN KEY (`userId`) REFERENCES `user`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_postId` FOREIGN KEY (`postId`) REFERENCES `post`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 -- CreateIndex
@@ -126,28 +136,6 @@ values
   (
     1,
     1,
-    'teste@gmail.com',
-    '123',
-    'https://github.com/diego3g.png',
-    '11111111111',
-    'Teste',
-    now(),
-    now()
-  ),
-  (
-    2,
-    2,
-    'teste2@gmail.com',
-    '123',
-    'https://github.com/EmiLopes.png',
-    '22222222222',
-    'Teste2',
-    now(),
-    now()
-  ),
-  (
-    3,
-    1,
     '12201000278@muz.ifsuldeminas.edu.br',
     '$2y$10$IXH9Kjtx4EDTpzXNvwYVleiYbCOW.5fuQRMXTQHpeoJ9qzQh3ORBK',
     'Bhryan Stepenhen',
@@ -172,7 +160,7 @@ values
   (
     1,
     'Primeiro Post',
-    'Primeiro Post',
+    'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus dicta, asperiores quibusdam, sed fugiat culpa facilis labore itaque pariatur dolores fugit ad quae quidem voluptates maxime eum libero! Eius, recusandae Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus dicta, asperiores quibusdam, sed fugiat culpa facilis labore itaque pariatur dolores fugit ad quae quidem voluptates maxime eum libero! Eius, recusandaeLorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus dicta, asperiores quibusdam, sed fugiat culpa facilis labore itaque pariatur dolores fugit ad quae quidem voluptates maxime eum libero! Eius, recusandaeLorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus dicta, asperiores quibusdam, sed fugiat culpa facilis labore itaque pariatur dolores fugit ad quae quidem voluptates maxime eum libero! Eius, recusandaeLorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus dicta, asperiores quibusdam, sed fugiat culpa facilis labore itaque pariatur dolores fugit ad quae quidem voluptates maxime eum libero! Eius, recusandaeLorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus dicta, asperiores quibusdam, sed fugiat culpa facilis labore itaque pariatur dolores fugit ad quae quidem voluptates maxime eum libero! Eius, recusandae',
     true,
     1,
     now(),
@@ -184,7 +172,7 @@ values
     'Segundo Post',
     'Segundo Post',
     true,
-    2,
+    1,
     now(),
     now(),
     1
@@ -194,6 +182,11 @@ insert into
   `userLog` (`id`, `userId`, `loginAt`, `logoutAt`)
 values
   (1, 1, now(), now());
+
+insert into
+  `savePost` (`id`, `userId`, `postId`)
+values
+  (1, 1, 2);
 
 select
   *
