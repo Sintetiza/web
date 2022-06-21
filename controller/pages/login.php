@@ -46,7 +46,11 @@ $arrayForSave = [
   'email' => $resultArray['email'],
   'roleId' => $resultArray['roleId'],
   'avatar' => $resultArray['avatar'],
+  'CPF' => $resultArray['CPF'],
+  'birthDate' => $resultArray['birthDate'],
+  'created_at' => $resultArray['created_at'],
 ];
+
 $_SESSION['user'] = $arrayForSave;
 
 header('Location: ../../index.php');

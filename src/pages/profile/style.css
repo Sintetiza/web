@@ -1,16 +1,18 @@
 #profile {
+  padding: 20px;
+  margin: 75px;
   margin-top: 75px;
+  border: 2px solid #33ff00;
+  border-radius: 12px;
 }
 
 .containerProfile {
   margin-top: 50px;
   margin-bottom: 50px;
-  border: 1px solid red;
   padding: 30px 20px;
 }
 
 .containerData {
-  border: 1px solid red;
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -31,4 +33,158 @@
   width: 240px;
   height: 240px;
   border-radius: 50%;
+}
+
+.createDate {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 34px;
+  font-family: "Source Code Pro", sans-serif;
+  gap: 0.5rem;
+}
+
+.createDate b {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.createDate span {
+  font-weight: 400;
+
+  color: #eeeeee;
+}
+
+.userNameTitle h1 {
+  font-family: "Source Code Pro", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  /* or 94% */
+
+  display: flex;
+  align-items: center;
+
+  color: #33ff00;
+}
+
+.contact {
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+}
+
+.containerSections {
+  position: relative;
+  margin-top: 50px;
+}
+
+.containerSections ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.containerSections ul li {
+  font-family: "Source Code Pro", sans-serif;
+  position: relative;
+}
+
+.containerSections ul li .lineGreen {
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: -11px;
+  border: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.containerSections ul li .lineGreen.active {
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #33ff00;
+}
+
+.containerSections ul li:hover .lineGreen {
+  width: 100%;
+  height: 3px;
+  background-color: #33ff00;
+  border: 0;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #d9d9d9;
+  margin-top: 10px;
+}
+
+.sectionData {
+  margin-top: 50px;
+}
+
+.sectionData .inputsContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputContainer input {
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid #ffffff;
+  border-radius: 14px;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-family: "Source Code Pro", sans-serif;
+}
+
+.inputContainer label {
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+
+  color: #33ff00;
+  width: 177px;
+}
+
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.buttonSend {
+  background: linear-gradient(180deg, #2d2d2d 0%, rgba(42, 42, 42, 0) 100%);
+  border: 2.4322px solid #33ff00;
+  border-radius: 14px;
+  width: 300px;
+  height: 50px;
+  margin: 0 auto;
+  cursor: pointer;
 }

@@ -4,6 +4,10 @@ create database if not exists `sintetiza`;
 
 use `sintetiza`;
 
+-- configure timezone
+set
+  time_zone = '-03:00';
+
 create table if not exists `subject` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
@@ -29,6 +33,7 @@ CREATE TABLE if not exists `user` (
   `password` LONGTEXT NOT NULL,
   `name` varchar(5000) NOT NULL,
   `avatar` LONGTEXT,
+  `birthDate` DATE,
   `CPF` varchar(11),
   `createdAt` TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updatedAt` TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,

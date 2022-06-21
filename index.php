@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="./src/styles/header.css" />
   <link rel="stylesheet" href="./src/styles/home.css" />
   <link rel="stylesheet" href="./src/styles/responsive.css" />
+  <link rel="stylesheet" href="./src/styles/footer.css">
   <script src="https://kit.fontawesome.com/f18aeaea05.js" crossorigin="anonymous" defer></script>
   <script src="./src/scripts/home/index.js" defer></script>
   <title>Sintetiza</title>

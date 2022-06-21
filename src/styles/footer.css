@@ -1,0 +1,40 @@
+footer {
+  margin-top: 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .logo {
+  width: 320px;
+  height: 52px;
+}
+
+footer .logo img {
+  width: 100%;
+}
+
+footer .socialMedia {
+  margin-top: 55px;
+  width: 320px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 56px;
+}
+
+footer .socialMedia .item:nth-child(2n) i {
+  color: var(--body-text-color);
+}
+
+footer .description {
+  margin-top: 88px;
+  margin-bottom: 56px;
+
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 46px;
+  color: var(--title-text-color);
+}
