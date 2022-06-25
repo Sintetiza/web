@@ -7,10 +7,10 @@ $password = '';
 $database = 'sintetiza';
 
 if (!$isDevelopment) {
-  $server = 'sql102.epizy.com';
-  $username = 'epiz_31747922';
-  $password = '8CYrxS1t6Q';
-  $database = 'epiz_31747922_sintetiza';
+  $server = 'sql104.epizy.com';
+  $username = 'epiz_32031535';
+  $password = 'ooZciOuBwuv9';
+  $database = 'epiz_32031535_sintetiza';
 }
 
 

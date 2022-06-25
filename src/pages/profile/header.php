@@ -39,7 +39,7 @@
       ?>
       <ul class="pedirResumo">
         <li class="textUpperCase">
-          <a href="./src/pages/resumos/pedir.html" class="btn btnOutline">
+          <a href="../resumos/pedir.html" class="btn btnOutline">
             Pedir Resumo
           </a>
         </li>

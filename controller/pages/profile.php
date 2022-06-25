@@ -14,6 +14,9 @@ $birthDate = getFormField('birthDate');
 $avatar = getFormField('avatar');
 
 $isValid = validateCPF($CPF);
+if ($CPF == '') {
+  $isValid = true;
+}
 if (!$isValid) {
   $error = 'CPF inválido';
   header('Location: ../../src/pages/profile/index.php?error=' . $error);

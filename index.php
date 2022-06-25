@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:wght@300;400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./global.css" />
+  <link rel="stylesheet" href="./src/styles/global.css" />
   <link rel="stylesheet" href="./src/styles/header.css" />
   <link rel="stylesheet" href="./src/styles/home.css" />
   <link rel="stylesheet" href="./src/styles/responsive.css" />
@@ -102,7 +102,7 @@
   <main>
     <section class="mainContent" id="Home">
       <div class="ilustration">
-        <img src="./src/assets/ilustration1.svg" alt="Ilustration" />
+        <img src="./src/assets/Ilustration1.svg" alt="Ilustration" />
       </div>
       <div class="text">
         <h1>

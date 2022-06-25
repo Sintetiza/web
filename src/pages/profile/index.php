@@ -12,7 +12,7 @@
   <title>Profile</title>
   <!-- <link rel="stylesheet" href="../../styles/form.css" /> -->
   <link rel="stylesheet" href="../../styles/header.css" />
-  <link rel="stylesheet" href="../../../global.css" />
+  <link rel="stylesheet" href="../../styles/global.css" />
   <link rel="stylesheet" href="../../styles/footer.css" />
   <link rel="stylesheet" href="./style.css">
   <script src="https://kit.fontawesome.com/f18aeaea05.js" crossorigin="anonymous" defer></script>
@@ -105,6 +105,12 @@
     </div>
     <p class="description">Feito com 💚 por Luísa, Bhryan, Emilly e Caio</p>
   </footer>
+
+  <script type="module">
+    import {
+      formUrl
+    } from "../../utils/formURL.js";
+  </script>
 </body>
 
 </html>

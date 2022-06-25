@@ -42,7 +42,7 @@ if (strlen($validatePassword)) {
 }
 
 $passwordSecure = password_hash($password, PASSWORD_DEFAULT);
-$table = "user";
+
 $fields = [
   "name" => $name,
   "email" => $email,
@@ -53,7 +53,6 @@ $fields = [
 ];
 
 
-$insertResult = "INSERT INTO $table (" . implode(', ', array_keys($fields)) . ") VALUES (" . implode(', ', array_values($fields)) . ")";
 
 
 // insert in database

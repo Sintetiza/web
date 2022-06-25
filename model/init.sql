@@ -1,8 +1,19 @@
-drop database if exists `sintetiza`;
+-- drop database if exists `sintetiza`;
+-- create database if not exists `sintetiza`;
+-- use `sintetiza`;
+drop table if exists `subject`;
 
-create database if not exists `sintetiza`;
+drop table if exists `role`;
 
-use `sintetiza`;
+drop table if exists `user`;
+
+drop table if exists `userLog`;
+
+drop table if exists `post`;
+
+drop table if exists `aksPost`;
+
+drop table if exists `savePost`;
 
 -- configure timezone
 set
@@ -73,7 +84,8 @@ create table if not exists `aksPost` (
   `email` varchar(300) NOT NULL,
   `askPost` LONGTEXT,
   `createdAt` TIMESTAMP NOT NULL DEFAULT now(),
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  CONSTRAINT `fk_user_Id` FOREIGN KEY (`userId`) REFERENCES `user`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 create table if not exists `savePost` (
@@ -170,7 +182,77 @@ values
   (
     2,
     'Segundo Post',
-    'Segundo Post',
+    '
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, reiciendis in qui cupiditate accusamus soluta unde libero! Quos quasi saepe nemo cum? Ratione fugit id sequi repellat suscipit reiciendis explicabo.
+    Quo quos atque, provident quam enim commodi possimus voluptatem repellat perspiciatis pariatur totam quia eaque veniam dolorem natus vel, ut velit accusantium corrupti architecto aut eveniet magnam. Laboriosam, laborum pariatur?
+    Vitae quo dicta earum cupiditate id recusandae ratione, vero suscipit vel iusto provident at aperiam et commodi in repellat facere veritatis officiis necessitatibus quaerat quis nostrum harum. Dicta, itaque ratione.
+    Quo possimus aliquam quae reiciendis facilis maiores fugit architecto ipsam consequuntur et. Libero optio sint animi, nisi aperiam ut ullam doloremque iste nesciunt, accusantium officiis aut quam facilis quos voluptatem.
+    Dolore consequatur pariatur voluptatibus nisi maxime sed neque assumenda et aliquam veritatis delectus voluptas, voluptatum ea necessitatibus labore qui nostrum modi, error vel? Reiciendis dolor nostrum deserunt porro eos doloribus!
+    Voluptates quibusdam libero voluptate mollitia non et similique. Quisquam repellat et veritatis, natus maxime ipsum minima consequuntur, itaque reiciendis, ipsa fugit rem! Veritatis officiis neque perspiciatis nam dolorum, cupiditate perferendis.
+    Ipsa fuga nemo libero vitae sunt explicabo deserunt ullam, veritatis, aliquam labore dolore iure illo sit doloremque placeat voluptatibus, quas autem perspiciatis enim. Eveniet veniam velit non aliquid illum soluta!
+    Reiciendis vero repellat dolorum fugiat. Minus, adipisci consectetur in iste tempora labore, quis iure provident fugit laborum blanditiis saepe quo accusantium explicabo rerum voluptatem sed sunt dolorum facilis! Doloribus, dignissimos.
+    Optio neque nihil possimus! Aperiam reprehenderit ab mollitia qui placeat laborum, sit dolore fuga numquam sed? Distinctio aspernatur nulla, incidunt porro, eaque deleniti beatae, quod quaerat est ducimus nam architecto.
+    Animi nostrum aliquid nemo dolorum voluptate! Debitis ad, error rem animi alias saepe maxime suscipit obcaecati dolorum amet! Recusandae inventore quis culpa impedit et, odit perferendis nisi tenetur reiciendis sit?',
+    true,
+    1,
+    now(),
+    now(),
+    1
+  ),
+  (
+    3,
+    'Terceiro Post',
+    '
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, reiciendis in qui cupiditate accusamus soluta unde libero! Quos quasi saepe nemo cum? Ratione fugit id sequi repellat suscipit reiciendis explicabo.
+    Quo quos atque, provident quam enim commodi possimus voluptatem repellat perspiciatis pariatur totam quia eaque veniam dolorem natus vel, ut velit accusantium corrupti architecto aut eveniet magnam. Laboriosam, laborum pariatur?
+    Vitae quo dicta earum cupiditate id recusandae ratione, vero suscipit vel iusto provident at aperiam et commodi in repellat facere veritatis officiis necessitatibus quaerat quis nostrum harum. Dicta, itaque ratione.
+    Quo possimus aliquam quae reiciendis facilis maiores fugit architecto ipsam consequuntur et. Libero optio sint animi, nisi aperiam ut ullam doloremque iste nesciunt, accusantium officiis aut quam facilis quos voluptatem.
+    Dolore consequatur pariatur voluptatibus nisi maxime sed neque assumenda et aliquam veritatis delectus voluptas, voluptatum ea necessitatibus labore qui nostrum modi, error vel? Reiciendis dolor nostrum deserunt porro eos doloribus!
+    Voluptates quibusdam libero voluptate mollitia non et similique. Quisquam repellat et veritatis, natus maxime ipsum minima consequuntur, itaque reiciendis, ipsa fugit rem! Veritatis officiis neque perspiciatis nam dolorum, cupiditate perferendis.
+    Ipsa fuga nemo libero vitae sunt explicabo deserunt ullam, veritatis, aliquam labore dolore iure illo sit doloremque placeat voluptatibus, quas autem perspiciatis enim. Eveniet veniam velit non aliquid illum soluta!
+    Reiciendis vero repellat dolorum fugiat. Minus, adipisci consectetur in iste tempora labore, quis iure provident fugit laborum blanditiis saepe quo accusantium explicabo rerum voluptatem sed sunt dolorum facilis! Doloribus, dignissimos.
+    Optio neque nihil possimus! Aperiam reprehenderit ab mollitia qui placeat laborum, sit dolore fuga numquam sed? Distinctio aspernatur nulla, incidunt porro, eaque deleniti beatae, quod quaerat est ducimus nam architecto.
+    Animi nostrum aliquid nemo dolorum voluptate! Debitis ad, error rem animi alias saepe maxime suscipit obcaecati dolorum amet! Recusandae inventore quis culpa impedit et, odit perferendis nisi tenetur reiciendis sit?',
+    true,
+    1,
+    now(),
+    now(),
+    1
+  ),
+  (
+    4,
+    'Quarto Post',
+    '
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, reiciendis in qui cupiditate accusamus soluta unde libero! Quos quasi saepe nemo cum? Ratione fugit id sequi repellat suscipit reiciendis explicabo.
+    Quo quos atque, provident quam enim commodi possimus voluptatem repellat perspiciatis pariatur totam quia eaque veniam dolorem natus vel, ut velit accusantium corrupti architecto aut eveniet magnam. Laboriosam, laborum pariatur?
+    Vitae quo dicta earum cupiditate id recusandae ratione, vero suscipit vel iusto provident at aperiam et commodi in repellat facere veritatis officiis necessitatibus quaerat quis nostrum harum. Dicta, itaque ratione.
+    Quo possimus aliquam quae reiciendis facilis maiores fugit architecto ipsam consequuntur et. Libero optio sint animi, nisi aperiam ut ullam doloremque iste nesciunt, accusantium officiis aut quam facilis quos voluptatem.
+    Dolore consequatur pariatur voluptatibus nisi maxime sed neque assumenda et aliquam veritatis delectus voluptas, voluptatum ea necessitatibus labore qui nostrum modi, error vel? Reiciendis dolor nostrum deserunt porro eos doloribus!
+    Voluptates quibusdam libero voluptate mollitia non et similique. Quisquam repellat et veritatis, natus maxime ipsum minima consequuntur, itaque reiciendis, ipsa fugit rem! Veritatis officiis neque perspiciatis nam dolorum, cupiditate perferendis.
+    Ipsa fuga nemo libero vitae sunt explicabo deserunt ullam, veritatis, aliquam labore dolore iure illo sit doloremque placeat voluptatibus, quas autem perspiciatis enim. Eveniet veniam velit non aliquid illum soluta!
+    Reiciendis vero repellat dolorum fugiat. Minus, adipisci consectetur in iste tempora labore, quis iure provident fugit laborum blanditiis saepe quo accusantium explicabo rerum voluptatem sed sunt dolorum facilis! Doloribus, dignissimos.
+    Optio neque nihil possimus! Aperiam reprehenderit ab mollitia qui placeat laborum, sit dolore fuga numquam sed? Distinctio aspernatur nulla, incidunt porro, eaque deleniti beatae, quod quaerat est ducimus nam architecto.
+    Animi nostrum aliquid nemo dolorum voluptate! Debitis ad, error rem animi alias saepe maxime suscipit obcaecati dolorum amet! Recusandae inventore quis culpa impedit et, odit perferendis nisi tenetur reiciendis sit?',
+    true,
+    1,
+    now(),
+    now(),
+    1
+  ),
+  (
+    5,
+    'QUINTO Post',
+    '
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, reiciendis in qui cupiditate accusamus soluta unde libero! Quos quasi saepe nemo cum? Ratione fugit id sequi repellat suscipit reiciendis explicabo.
+    Quo quos atque, provident quam enim commodi possimus voluptatem repellat perspiciatis pariatur totam quia eaque veniam dolorem natus vel, ut velit accusantium corrupti architecto aut eveniet magnam. Laboriosam, laborum pariatur?
+    Vitae quo dicta earum cupiditate id recusandae ratione, vero suscipit vel iusto provident at aperiam et commodi in repellat facere veritatis officiis necessitatibus quaerat quis nostrum harum. Dicta, itaque ratione.
+    Quo possimus aliquam quae reiciendis facilis maiores fugit architecto ipsam consequuntur et. Libero optio sint animi, nisi aperiam ut ullam doloremque iste nesciunt, accusantium officiis aut quam facilis quos voluptatem.
+    Dolore consequatur pariatur voluptatibus nisi maxime sed neque assumenda et aliquam veritatis delectus voluptas, voluptatum ea necessitatibus labore qui nostrum modi, error vel? Reiciendis dolor nostrum deserunt porro eos doloribus!
+    Voluptates quibusdam libero voluptate mollitia non et similique. Quisquam repellat et veritatis, natus maxime ipsum minima consequuntur, itaque reiciendis, ipsa fugit rem! Veritatis officiis neque perspiciatis nam dolorum, cupiditate perferendis.
+    Ipsa fuga nemo libero vitae sunt explicabo deserunt ullam, veritatis, aliquam labore dolore iure illo sit doloremque placeat voluptatibus, quas autem perspiciatis enim. Eveniet veniam velit non aliquid illum soluta!
+    Reiciendis vero repellat dolorum fugiat. Minus, adipisci consectetur in iste tempora labore, quis iure provident fugit laborum blanditiis saepe quo accusantium explicabo rerum voluptatem sed sunt dolorum facilis! Doloribus, dignissimos.
+    Optio neque nihil possimus! Aperiam reprehenderit ab mollitia qui placeat laborum, sit dolore fuga numquam sed? Distinctio aspernatur nulla, incidunt porro, eaque deleniti beatae, quod quaerat est ducimus nam architecto.
+    Animi nostrum aliquid nemo dolorum voluptate! Debitis ad, error rem animi alias saepe maxime suscipit obcaecati dolorum amet! Recusandae inventore quis culpa impedit et, odit perferendis nisi tenetur reiciendis sit?',
     true,
     1,
     now(),
@@ -186,7 +268,11 @@ values
 insert into
   `savePost` (`id`, `userId`, `postId`)
 values
-  (1, 1, 2);
+  (1, 1, 2),
+  (2, 1, 1),
+  (3, 1, 3),
+  (4, 1, 4),
+  (5, 1, 5);
 
 select
   *

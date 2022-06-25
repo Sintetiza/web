@@ -230,8 +230,8 @@
 }
 
 .card .cardProfileImage {
-  width: 53px;
-  height: 53px;
+  width: 55px;
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -251,6 +251,10 @@
   right: 20px;
 }
 
+.card.hidden {
+  display: none;
+}
+
 .controllers > div {
   border: 1px solid white;
   border-radius: 50%;
@@ -260,12 +264,10 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-}
-
-.prev {
   position: absolute;
   top: 50%;
-  /* left: 0; */
+  z-index: 9;
+  background-color: transparent;
 }
 
 .next {
