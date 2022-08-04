@@ -208,16 +208,3 @@ main {
 .preFooter .btn {
   margin-top: 60px;
 }
-
-body > div.line {
-  background: radial-gradient(
-      100% 806403.83% at 100% 0%,
-      #000000 11.33%,
-      #33ff00 48.95%,
-      #000000 87.55%
-    ),
-    rgba(51, 255, 0, 0.8);
-  opacity: 0.8;
-  height: 10px;
-  width: 100%;
-}

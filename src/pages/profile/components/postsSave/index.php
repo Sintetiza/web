@@ -1,4 +1,6 @@
 <div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
   <div class="controllers">
     <div class="prev">
       <i class="fa-solid fa-arrow-left"></i>
@@ -24,29 +26,71 @@
 
     ?>
     <?php foreach ($posts as $post) : ?>
-      <div class="card" onclick="redirectToPost(<?= $post['postId'] ?>)">
-        <div class="cardBody">
-          <div class="createDate">
-            <b>Publicado</b>
-            <span>Criado em <?= date_format(date_create($post['createdAt']), 'd/m/Y'); ?></span>
-          </div>
-          <div class="cardTitle">
-            <h1><?= $post['title'] ?></h1>
-          </div>
-          <div class="preText"><?= $post['content'] ?></div>
-          <div class="cardProfile">
-            <div class="cardProfileImage">
-              <img src="<?= $post['avatar'] ?>" alt="<?= $post['name'] ?>">
-            </div>
-            <div class="cardProfileUserName">
-              <h4><?= $post['name'] ?></h4>
-            </div>
-          </div>
-          <a href="../../../controller/unsavePost.php?id=<?= $post['postId'] ?>" class="delete">
-            <i class="fa-solid fa-trash"></i>
-          </a>
-        </div>
-      </div>
+
+      <script>
+        function createElements() {
+          const toHtml = new showdown.Converter();
+
+          function converterFn(text) {
+            return toHtml.makeHtml(text);
+          }
+          const cardBody = document.createElement('div');
+          cardBody.classList.add('cardBody');
+          const createDate = document.createElement('div');
+          createDate.classList.add('createDate');
+          const createDateBold = document.createElement('b');
+          createDateBold.innerText = 'Publicado';
+          const createDateSpan = document.createElement('span');
+          createDateSpan.innerText = `Criado em <?= date_format(date_create($post['createdAt']), 'd/m/Y'); ?>`;
+          createDate.appendChild(createDateBold);
+          createDate.appendChild(createDateSpan);
+          const cardTitle = document.createElement('div');
+          cardTitle.classList.add('cardTitle');
+          const cardTitleH1 = document.createElement('h1');
+
+          cardTitleH1.innerHTML = converterFn(`<?= $post['title'] ?>`);
+
+          cardTitle.appendChild(cardTitleH1);
+          const preText = document.createElement('div');
+          preText.classList.add('preText');
+          preText.innerHTML = converterFn(`<?= $post['content'] ?>`);
+          const cardProfile = document.createElement('div');
+          cardProfile.classList.add('cardProfile');
+          const cardProfileImage = document.createElement('div');
+          cardProfileImage.classList.add('cardProfileImage');
+          const cardProfileImageImg = document.createElement('img');
+          cardProfileImageImg.src = `<?= $post['avatar'] ?>`;
+          cardProfileImageImg.alt = converterFn(`<?= $post['name'] ?>`);
+          cardProfileImage.appendChild(cardProfileImageImg);
+          const cardProfileUserName = document.createElement('div');
+          cardProfileUserName.classList.add('cardProfileUserName');
+          const cardProfileUserNameH4 = document.createElement('h4');
+          cardProfileUserNameH4.innerHTML = converterFn(`<?= $post['name'] ?>`);
+          cardProfileUserName.appendChild(cardProfileUserNameH4);
+          const deleteButton = document.createElement('a');
+          deleteButton.classList.add('delete');
+          deleteButton.href = `../../../controller/unsavePost.php?id=<?= $post['postId'] ?>`;
+          const deleteButtonI = document.createElement('i');
+          deleteButtonI.classList.add('fa-solid');
+          deleteButtonI.classList.add('fa-trash');
+          deleteButton.appendChild(deleteButtonI);
+          cardBody.appendChild(createDate);
+          cardBody.appendChild(cardTitle);
+          cardBody.appendChild(preText);
+          cardBody.appendChild(cardProfile);
+          cardProfile.appendChild(cardProfileImage);
+          cardProfile.appendChild(cardProfileUserName);
+          cardBody.appendChild(deleteButton);
+
+          const card = document.createElement('div');
+          card.classList.add('card');
+          card.setAttribute('onclick', `redirectToPost(<?= $post['postId'] ?>)`);
+          card.appendChild(cardBody);
+
+          document.querySelector('.cardsContainers').appendChild(card);
+        }
+        createElements();
+      </script>
     <?php endforeach; ?>
   </div>
 </div>
@@ -54,9 +98,9 @@
 <script>
   const allPreTexts = document.querySelectorAll(".preText");
   allPreTexts.forEach(e => {
-    const value = String(e.innerHTML);
-    if (value.length > 150) {
-      e.innerText = value.slice(0, 150);
+    const value = String(e.innerText);
+    if (value.length > 50) {
+      e.innerText = value.slice(0, 50);
       e.innerText += '...';
     }
   })

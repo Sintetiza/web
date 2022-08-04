@@ -1,0 +1,189 @@
+.seta {
+  top: 100px;
+}
+
+.resumo {
+  margin-top: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Source code pro", monospace;
+  min-height: 100vh;
+  overflow: auto;
+}
+.resumo::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+.resumo > h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: "Source code pro", monospace;
+  color: var(--body-text-color);
+}
+
+.resumo p {
+  font-size: 1.5rem;
+  font-family: "Source code pro", monospace;
+  margin-bottom: 20px;
+}
+
+.resumo h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.resumo h1,
+.resumo h2,
+.resumo h3,
+.resumo h4,
+.resumo h5,
+.resumo h6 {
+  font-family: "Source code pro", monospace;
+  color: var(--body-text-color);
+}
+
+.resumo ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  max-width: 80%;
+  max-height: 300px;
+}
+
+/* Author profile */
+
+.authorProfile {
+  display: flex;
+  /* justify-content: space-between; */
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  /* Subt[itulo */
+
+  border: 2px solid #33ff00;
+  border-radius: 22px;
+  padding: 1rem;
+  height: 200px;
+  max-width: 700px;
+  margin: 1rem auto;
+
+  font-family: "Source Code Pro", monospace;
+}
+
+.authorProfile__content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 2 2;
+}
+
+.authorProfile__image {
+  width: 100px;
+  height: 100px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
+
+.authorProfile__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+  height: 100%;
+}
+
+.authorProfile__publish {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 700;
+
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+
+  /* T[itulo */
+
+  color: #ffffff;
+}
+
+.authorProfile__publish--date {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.authorProfile__name {
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #33ff00;
+}
+
+.authorProfile__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.3rem;
+  height: 100%;
+  min-height: max-content;
+  flex: 1;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  /* T[itulo */
+
+  border: 2px solid #ffffff;
+  border-radius: 22px;
+}
+
+.authorProfile__form__button {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  border-radius: 15px;
+  width: 80%;
+  padding: 0.5rem;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.authorProfile__form__button:hover {
+  filter: brightness(0.8);
+}
+
+.authorProfile__form--buttonSave {
+  border: 2px solid #33ff00;
+}
+
+.authorProfile__form--buttonSave:hover {
+  background-color: #33ff00;
+  color: #000;
+}
+
+.authorProfile__form--buttonShare {
+  border: 2px solid #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .authorProfile {
+    flex-direction: column;
+    height: 300px;
+  }
+  .authorProfile__form {
+    padding: 1rem;
+  }
+}

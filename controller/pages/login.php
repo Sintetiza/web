@@ -40,6 +40,8 @@ if (!$resultPassword) {
 }
 
 session_start();
+session_create_id(1);
+
 $arrayForSave = [
   'id' => $resultArray['id'],
   'name' => $resultArray['name'],
