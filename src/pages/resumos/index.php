@@ -163,7 +163,7 @@
 
 
       <?php if ($isUser) : ?>
-        <form class="authorProfile__form" action="../../../controller/pages/save.php?id=<?= $resumo['id'] ?>">
+        <form class="authorProfile__form" onsubmit="savePost">
           <button class="authorProfile__form__button authorProfile__form--buttonSave" type="submit">
             Salvar
           </button>
@@ -183,6 +183,20 @@
     const resumoElement = document.querySelector('.resumo');
     resumoElement.innerHTML = titleConvert;
     resumoElement.innerHTML += html;
+
+    addEventListener('submit', savePost)
+
+    async function savePost(event) {
+      event.preventDefault();
+      const url = "../../../controller/pages/save.php?id=<?= $resumo['id'] ?>"
+      console.log(url);
+      const response = await fetch(url);
+      const data = await response.json();
+      console.log(data);
+      const form = document.querySelector('.authorProfile__form');
+      form.action = '../../../controller/pages/save.php?id=' + id;
+      console.log(form.action);
+    }
   </script>
 </body>
 

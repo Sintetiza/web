@@ -25,6 +25,11 @@ footer .logo {
   height: 52px;
 }
 
+footer .logo svg {
+  width: 320px;
+  height: 52px;
+}
+
 footer .logo img {
   width: 100%;
 }
