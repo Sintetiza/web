@@ -47,8 +47,8 @@ CREATE TABLE if not exists `user` (
   `birthDate` DATE,
   `CPF` varchar(11),
   `postSave` int(11),
-  `createdAt` TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updatedAt` TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `createdAt` TIMESTAMP NOT NULL DEFAULT now(),
+  `updatedAt` TIMESTAMP NOT NULL DEFAULT now(),
   PRIMARY KEY (`id`),
   UNIQUE (`email`),
   CONSTRAINT `fk_user_role` FOREIGN KEY (`roleId`) REFERENCES `role`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -57,8 +57,8 @@ CREATE TABLE if not exists `user` (
 CREATE TABLE if not exists `userLog` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `userId` INTEGER NOT NULL,
-  `loginAt` TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `logoutAt` TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `loginAt` TIMESTAMP NOT NULL DEFAULT now(),
+  `logoutAt` TIMESTAMP NOT NULL DEFAULT now(),
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_userLog_user` FOREIGN KEY (`userId`) REFERENCES `user`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
 );
